@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biodata Pribadi</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .biodata {
+        line-height: 2;
+    }
+
+    .label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+color: #555;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Biodata Pribadi</h1>
+    <div class="biodata">
+    <p><span class="label">Nama:</span> Mochamad Syafei Bayan Rizqi</p>
+    <p><span class="label">Tempat, Tanggal Lahir:</span> Jember, 27 Januari 2001</p>
+    <p><span class="label">Alamat:</span> Jl. Sunan Kalijaga No. 28b, Jember</p>
+    <p><span class="label">Email:</span> msyafeibayanr@gmail.com</p>
+    <p><span class="label">Hobi:</span> Olahraga, Belajar Pemrograman, Healing</p>
+    </div>
+
+    <div class="footer" id="tanggal"></div>
+</div>
+
+<script>
+    // Menampilkan tanggal hari ini secara otomatis
+    const tanggal = new Date();
+    const options = { weekday: "long", year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("tanggal").textContent = "Tanggal hari ini: " + tanggal.toLocaleDateString("id-ID", options);
+</script>
+</body>
+</html>

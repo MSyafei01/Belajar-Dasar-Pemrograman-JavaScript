@@ -1,0 +1,843 @@
+A.
+// Alert //
+Metode yang digunakan untuk menampilkan kotak dialog peringatan dengan pesan yang ditentukan di browser.
+
+//Argument//
+Data yang dikirimkan ke dalam function saat function dipanggil, bisa berupa nilai langsung atau variabel.
+
+//Array//
+Struktur data yang dapat menyimpan kumpulan data yang terurut. Elemen di dalam array dapat diakses melalui indeks.
+
+B
+// Block Statement //
+Sekumpulan statement yang dikelompokkan dalam tanda kurung kurawal ({ }) untuk dieksekusi bersama.
+
+// Boolean //
+Tipe data yang hanya memiliki dua nilai, yaitu true (benar) dan false (salah).
+
+// Break //
+Pernyataan yang digunakan untuk menghentikan perulangan atau percabangan dalam suatu program.
+
+// Browser //
+Perangkat lunak yang digunakan untuk mengakses dan menampilkan halaman web.
+
+
+C
+// Closure //
+Kombinasi dari function beserta lexical environment-nya yang dapat mengakses variabel di luar function tersebut.
+
+// Comment //
+Teks dalam kode yang tidak dijalankan oleh interpreter dan digunakan untuk memberikan catatan atau penjelasan.
+
+// Compiled Language //
+Bahasa pemrograman yang membutuhkan proses kompilasi untuk mengubah kode sumber ke bahasa mesin sebelum dijalankan.
+
+
+D
+// Declarative //
+Pendekatan pemrograman yang menekankan pada hasil akhir daripada proses atau langkah-langkah spesifik untuk mencapainya.
+
+// Document Object Model (DOM) //
+Struktur data yang memungkinkan JavaScript untuk mengakses dan memanipulasi elemen-elemen dalam dokumen HTML.
+
+
+E
+// ECMAScript //
+Standar yang menjelaskan cara kerja JavaScript dan spesifikasinya.
+
+// Element //
+Nilai yang disimpan di dalam array.
+
+// Expression //
+Bagian dari sebuah statement yang menghasilkan nilai, seperti angka atau hasil operasi matematika.
+
+F
+// First-class Citizen //
+Konsep di mana function dalam JavaScript dapat diperlakukan seperti nilai atau objek lain, dapat disimpan dalam variabel, dikirimkan sebagai argument, atau dikembalikan dari function lain.
+
+// Flow Control //
+Urutan bagaimana expression dan statement dijalankan oleh komputer berdasarkan kondisi dan logika tertentu.
+
+// Function //
+Blok kode yang dirancang untuk melakukan tugas tertentu dan dapat dipanggil berulang kali dalam program.
+
+
+G
+// Global Object //
+Objek yang tersedia secara global dalam lingkungan runtime JavaScript, seperti window di browser dan process di Node.js.
+
+// Global Scope //
+Ruang lingkup variabel yang tersedia di seluruh bagian kode, tidak terbatas pada function atau block tertentu.
+
+H
+// High-Level Language //
+Bahasa pemrograman yang lebih mudah dipahami oleh manusia dan memerlukan konversi ke bahasa mesin untuk dieksekusi.
+
+// Hoisting //
+Mekanisme JavaScript yang mengangkat deklarasi variabel dan function ke bagian atas scope sebelum kode dieksekusi.
+
+I 
+// Identifier //
+Nama yang digunakan untuk mengidentifikasi variabel, function, atau properti lainnya dalam kode.
+
+// Increment //
+Penambahan nilai variabel setiap kali perulangan dilakukan.
+
+// Indeks //
+Angka yang digunakan untuk merujuk ke posisi nilai di dalam array, dimulai dari 0.
+
+// Interpreter //
+Program yang menerjemahkan dan menjalankan kode sumber secara langsung tanpa memerlukan proses kompilasi.
+
+
+K
+// Kompilasi //
+Proses mengubah kode sumber dari bahasa pemrograman tingkat tinggi ke bahasa mesin yang dapat dieksekusi oleh komputer.
+
+L
+// Looping //
+Pernyataan yang memungkinkan eksekusi kode yang sama secara berulang.
+
+M
+// Modularisasi //
+Teknik pemecahan kode program yang kompleks menjadi bagian-bagian lebih kecil dan sederhana agar lebih terstruktur, singkat, dan jelas.
+
+
+
+N
+// Node.js //
+Runtime environment untuk menjalankan JavaScript di luar browser, memungkinkan pengembangan aplikasi server dan lainnya.
+
+// Number //
+Tipe data yang merepresentasikan bilangan bulat atau pecahan dalam JavaScript.
+
+
+
+O
+// Object //
+Struktur data yang menyimpan pasangan key-value. Key dapat berupa string, sedangkan value bisa berupa tipe data apa saja, termasuk objek lain.
+
+// Operator //
+Simbol yang digunakan untuk melakukan operasi pada nilai dan variabel, seperti penambahan (+), pengurangan (-), dan sebagainya.
+
+
+
+P
+// Parameter //
+Variabel yang didefinisikan dalam parentheses saat mendeklarasikan function, digunakan untuk menerima input data saat function dipanggil.
+
+// Primitif (tipe data) //
+Tipe data yang hanya dapat menyimpan satu jenis data, seperti string, number, boolean, null, dan undefined.
+
+
+
+R
+// Read-Eval-Print-Loop (REPL) //
+Lingkungan interaktif yang membaca, mengevaluasi, dan mencetak hasil eksekusi kode JavaScript secara langsung.
+
+// Return //
+Statement dalam function yang mengembalikan nilai dari function tersebut ke tempat function dipanggil.
+
+
+
+S
+// Scripting Language //
+Bahasa pemrograman yang diterjemahkan dan dijalankan secara langsung oleh interpreter tanpa memerlukan proses kompilasi.
+
+// Sintaksis (Syntax) //
+Aturan penulisan kode dalam bahasa pemrograman yang harus diikuti agar kode dapat dijalankan dengan benar.
+
+// Syntactic Sugar //
+Sintaksis yang dibuat untuk mempermudah implementasi suatu konsep yang sudah ada sebelumnya.
+
+// Statement //
+Instruksi lengkap yang ditulis dalam kode pemrograman untuk dijalankan oleh komputer.
+
+// String //
+Tipe data yang merepresentasikan teks, ditandai dengan tanda kutip tunggal, ganda, atau backticks.
+
+
+
+T
+// Template Literal //
+Cara menulis string yang memungkinkan penyisipan expression menggunakan tanda backtick dan notasi ${}.
+
+// Terminal //
+Antarmuka baris perintah yang digunakan untuk menjalankan perintah dan program pada sistem operasi.
+
+// Tipe Data //
+Jenis data yang dapat diolah oleh program, seperti string, number, boolean, null, dan undefined.
+
+
+
+V
+// Variabel //
+Wadah untuk menampung nilai atau data yang dapat digunakan dan dimanipulasi dalam program.
+
+
+W
+// Window //
+Global object di lingkungan runtime browser yang menyediakan akses ke elemen dan fitur browser lainnya.
+
+
+Pahami Dasar JavaScript:
+
+1. const vs let vs var
+➡ const
+-> Digunakan untuk: Variabel yang tidak akan diubah nilainya.
+
+Contoh: javascript
+----------------------------------------------------
+const PI = 3.14;
+const API_URL = "https://contoh.com/api";
+----------------------------------------------------
+(Jika coba diubah PI = 5, akan error!)
+
+➡ let
+-> Digunakan untuk: Variabel yang bisa diubah nilainya.
+
+Contoh: javascript
+let counter = 0;
+counter = 1; // Bisa diubah
+➡ var (Avoid!)
+-> Legacy (sebaiknya hindari, gunakan let/const).
+
+-> Masalah: Scope-nya tidak jelas (function-scoped, bukan block-scoped).
+
+Kapan Pakai?
+
+-> Gunakan const secara default.
+
+-> Pakai let hanya jika nilai perlu diubah.
+
+2. function
+➡ Deklarasi Fungsi Biasa
+-> Digunakan untuk: Kode yang dipakai berulang.
+
+Contoh: javascript
+--------------------------------------------------------------------
+function greet(name) {
+  return `Halo, ${name}!`;
+}
+console.log(greet("Syabaqi")); // Output: "Halo, Syabaqi!"
+--------------------------------------------------------------------
+
+➡ Arrow Function (=>)
+-> Modern, cocok untuk callback.
+
+Contoh: javascript
+--------------------------------------------------------------------
+const greet =(name) => `Hallo, ${name}!`;
+--------------------------------------------------------------------
+
+Kapan Pakai?
+-> Gunakan deklarasi biasa jika butuh hoisting (bisa dipanggil sebelum deklarasi).
+
+-> Gunakan arrow function untuk kode singkat atau di dalam map/filter.
+
+3. if/else & switch
+➡ Kondisi Sederhana
+
+Contoh: javascript
+--------------------------------------------------------------------
+let nilai = 80;
+if (nilai >= 70) {
+  console.log("Lulus!");
+} else {
+  console.log("Remidi!");
+}
+--------------------------------------------------------------------
+
+➡ Ternary Operator (Shortcut if/else)
+Contoh: javascript
+--------------------------------------------------------------------
+const status = nilai >= 70 ? "Lulus" : "Remidi";
+--------------------------------------------------------------------
+
+Kapan Pakai?
+-> if/else untuk logika kompleks.
+
+-> switch untuk banyak kondisi tetap (e.g., pilih hari).
+
+
+4. for, while, forEach
+➡ Looping Array
+Contoh: javascript
+--------------------------------------------------------------------
+const skills = ["HTML", "CSS", "JS"];
+
+// Cara 1: for loop
+for (let i = 0; i < skills.length; i++) {
+  console.log(skills[i]);
+}
+
+// Cara 2: forEach (modern)
+skills.forEach(skill => console.log(skill));
+--------------------------------------------------------------------
+
+Kapan Pakai?
+-> for: Butuh kontrol index.
+
+-> forEach: Lebih simpel untuk array.
+
+
+5. addEventListener
+➡ Handle Event (e.g., klik tombol)
+Contoh: javascript
+--------------------------------------------------------------------
+document.getElementById("myButton").addEventListener("click", () => {
+  alert("Tombol diklik!");
+});
+--------------------------------------------------------------------
+Kapan Pakai?
+
+-> Saat butuh interaksi user (klik, input form, dll).
+
+6. class (OOP)
+➡ Buat Object yang Reusable
+Contoh: javascript
+--------------------------------------------------------------------
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Halo, ${this.name}!`);
+  }
+}
+const user1 = new User("Syabaqi");
+user1.greet(); // Output: "Halo, Syabaqi!"
+--------------------------------------------------------------------
+
+Kapan Pakai?
+
+-> Untuk proyek besar yang butuh organisasi kode.
+Contoh Integrasi di Web : javascript
+--------------------------------------------------------------------
+// 1. Simpan data
+const biodata = {
+  name: "Syabaqi",
+  skills: ["JS", "CSS"]
+};
+
+// 2. Fungsi tampilkan data
+function showBio() {
+  document.getElementById("name").textContent = biodata.name;
+}
+
+// 3. Event saat halaman loaded
+document.addEventListener("DOMContentLoaded", showBio);
+--------------------------------------------------------------------
+Tips Belajar:
+
+1. Praktik Langsung: Coba ubah nilai const ke let dan lihat perbedaannya.
+
+2. Debugging: Gunakan console.log() untuk cek nilai variabel.
+
+3. Proyek Kecil: Buat to-do list sederhana untuk latihan.
+
+Gunakan kode "Let (Variabel)" untuk bisa merubah nama variabel jika hanya menggunakan const 
+        maka variabel harus sesuai tidak bisa di ubah
+
+Contoh js:
+
+--------------------------------------------------------------------
+function printCompanyInfo() {
+  const name = 'Dicoding'; // <- nama variabel sama
+  const legal = 'LLC';
+  
+  console.log('Company name:', name);
+  console.log('Legal type:', legal);
+}
+ 
+function printEmployeeInfo() {
+  const name = 'John'; // <- nama variabel sama
+  const division = 'IT';
+  
+  console.log('Employee name:', name);
+  console.log('Division:', division);
+}
+ 
+printCompanyInfo();
+printEmployeeInfo();
+--------------------------------------------------------------------
+// nama variabel yang benar
+const firstName = 'Fulan';
+const _secondName = 'Fulana';
+ 
+// nama variabel yang salah karena diawali dengan angka
+const 1stName = 'Fulan';
+const 2ndName = 'Fulana';
+--------------------------------------------------------------------
+// nama variabel yang benar
+const firstName = 'Fulan';
+const last_name = 'Lestari';
+const $message = 'Hello, World!';
+const userId1 = 123;
+const userId2 = 456;
+ 
+// nama variabel yang salah
+const first-name = 'Fulan'; // tidak boleh mengandung karakter -
+const last name = 'Lestari'; // tidak boleh mengandung spasi
+const @message = 'Hello, World!'; // tidak boleh mengandung karakter @
+ 
+// ..dan lain-lain
+--------------------------------------------------------------------
+
+
+Operator
+
+simbol seperti + atau - yang sering digunakan untuk melakukan operasi matematika. Ketahuilah bahwa simbol 
+tersebut adalah sebuah operator. Faktanya, operator termasuk hal penting yang perlu diketahui agar Anda dapat 
+melakukan operasi-operasi dalam membuat sebuah program. Dalam materi kali ini, kita akan membahas jenis-jenis 
+operator yang umum digunakan pada JavaScript.
+
+-> Operator merupakan sebuah simbol atau teks yang digunakan untuk melakukan sebuah operasi, misalnya aritmetika, penugasan, logika, tipe data, atau operasi lain yang berhubungan dengan pemrograman.
+-> Operan adalah nilai yang menjadi target dari sebuah operasi.
+
+-> Operator (=,+,-,*,%,/,<,>) dan (type, typeof, ...)
+-> Operan (1,2,3,4,5,6,7,...) dan ("Belajar", "Sinau", "Dicoding")
+
+
+Secara umum, operator dalam JavaScript terbagi menjadi tiga kelompok: unary, binary, dan ternary. 
+Pengelompokan ini berdasarkan jumlah operan yang diperlukan untuk menggunakan suatu operator.
+
+--------------------------------------------------------------------
+let age = 25;
+ 
+// Unary operator
+typeof age;
+ 
+// Binary operator
+5 + 4;
+10 / 2;
+age = 30;
+ 
+// Ternary operator (conditional operator)
+(age < 18) ? 'You are too young!' : 'Welcome onboard!'; 
+--------------------------------------------------------------------
+
+Assignment Operator
+
+-> Operator penugasan atau assignment operator adalah operator yang digunakan untuk memberikan nilai kepada sebuah 
+variabel, baik inisiasi nilai baru maupun mengubah nilai yang sudah ada. Operator ini ditulis dengan simbol sama 
+dengan (=). Operator penugasan termasuk dalam kategori binary operator karena membutuhkan dua operan, 
+yaitu variabel di sisi kiri dan nilai yang akan diberikan di sisi kanan. Operator ini ditulis di antara kedua operan.
+
+
+--------------------------------------------------------------------
+// Digunakan untuk menginisiasi nilai
+const name = 'Dicoding';
+let location = 'Bandung';
+--------------------------------------------------------------------
+
+
+
+Arithmetic Operator
+
+Operator ->   Sisa bagi atau Modulus (%)
+Deskripsi ->  Binary operator yang mengembalikan sisa hasil bagi operan kiri dan operan kanan.
+Notasi ->     Operan1 % operan2
+Contoh -> 	  12 % 5 mengembalikan 2.
+
+              10 % 5 mengembalikan 0.
+
+              14 % 3 mengembalikan 2.
+
+Operator ->   Increment (++)
+Deskripsi ->  Unary operator yang digunakan untuk menambahkan satu nilai terhadap operan yang diberikan.
+              Operan harus berupa variabel yang dapat diubah nilainya.
+Notasi ->     ++operan; atau operan++;
+Contoh ->     Jika x adalah 3, ++x mengubah x menjadi 4 dan operasi mengembalikan 4.
+Deskripsi ->  Jika operator ini digunakan sebelum operan (++x), ia akan mengembalikan nilai x yang telah ditambahkan 1. 
+              Jika operator ini digunakan setelah operan (x++), ia akan mengembalikan nilai x yang belum ditambahkan 1. 
+Contoh ->     Jika x adalah 3, x++ operasi mengembalikan 3. Setelah itu, mengubah x menjadi 4.
+
+Operator ->   Decrement (--)
+Deskripsi ->  Sama seperti increment, tetapi alih-alih menambahkan, ia mengurangi nilai satu.
+Notasi ->     --operan; atau operan--;
+Contoh ->     Jika x adalah 3, --x mengubah x menjadi 2 dan operasi mengembalikan 2.
+COntoh ->     Jika x adalah 3, x-- operasi mengembalikan 3. Setelah itu, mengubah x menjadi 2.
+
+
+Operator ->   Eksponensial atau Pangkat (**)
+Deskripsi ->  Binary operator yang menghitung x (basis) dengan pangkat y (eksponen). Bentuk matematika: x ^ y.
+Notasi ->     operan1 ^ operan2
+Contoh ->     2 ** 3 mengembalikan 8.
+              10 ** 2 mengembalikan 100
+
+Contoh kode yang menunjukkan berbagai penggunaan operator aritmetika dalam JavaScript.
+
+--------------------------------------------------------------------
+6 + 5; // mengembalikan 11
+7 - 2; // mengembalikan 5
+8 * 5; // mengembalikan 40
+10 / 3; // mengembalikan 3.33
+10 % 2; // mengembalikan 0
+2 *(10 + 2); // mengembalikan 24
+--------------------------------------------------------------------
+Catatan
+Tanda kurung dalam operasi aritmetika menentukan urutan operasi yang dijalankan. Operasi yang diberi tanda kurung 
+akan dikalkulasi terlebih dulu. Hal ini juga merupakan aturan umum dalam bidang matematika.
+
+
+Comparison Operator
+Operator perbandingan adalah operator yang digunakan untuk membandingkan dua nilai dan mengembalikan nilai boolean 
+(true atau false) sebagai hasil perbandingan. Salah satu penggunaan operator perbandingan adalah ketika kita 
+berhadapan dengan skenario “Apakah x lebih besar dari y?” dan mendapatkan hasil dalam bentuk “Ya” atau “Tidak”.
+
+
+Operator ->   Sama (==)
+Deskripsi ->  Membandingkan dua operan, tanpa memperhatikan tipe data. Jika nilai kedua operan dianggap sama, operasi akan 
+              mengembalikan true, sebaliknya false.
+Notasi ->     operan1 == operan2
+Contoh ->     1 == 1 mengembalikan true.
+              1 == '1' mengembalikan true.
+              2 == 6 mengembalikan false.
+              'Dicoding' == 'dicoding' mengembalikan false.
+
+Operator ->   Tidak Sama (!=)
+Deskripsi ->  Membandingkan dua operan, tanpa memperhatikan tipe data. Jika nilai kedua operan dianggap tidak sama, 
+              operasi akan mengembalikan true, sebaliknya false. 
+Notasi ->     operan1 != operan2
+Contoh ->     1 != 1 mengembalikan false.
+              1 != '1' mengembalikan false.
+              2 != 6 mengembalikan true.
+              'Dicoding' != 'dicoding' mengembalikan true.
+
+
+Operator ->   Identik (===)
+Deskripsi ->  Membandingkan dua operan beserta tipe datanya. Jika kedua operan identik, operasi akan mengembalikan true, 
+              sebaliknya false.
+Notasi ->     operan1 === operan2
+Contoh ->     1 === 1 mengembalikan true.
+              1 === '1' mengembalikan false.
+              2 === 6 mengembalikan false.
+              'Dicoding' === 'dicoding' mengembalikan false.
+
+
+Operator ->   Tidak Identik (!==)
+Deskripsi ->  Membandingkan dua operan beserta tipe datanya. Jika kedua operan tidak identik, operasi akan 
+              mengembalikan true, sebaliknya false.
+Notasi ->     operan1 !== operan2
+Contoh ->     1 !== 1 mengembalikan false.
+              1 !== '1' mengembalikan true.
+              2 !== 6 mengembalikan true.
+              'Dicoding' !== 'dicoding' mengembalikan true.
+
+
+Operator ->   Lebih dari (>)
+Deskripsi ->  Membandingkan dua operan, apakah operan pertama lebih dari operan kedua? Jika pernyataan benar, 
+              mengembalikan true, sebaliknya false.
+Notasi ->     operan1 > operan2
+Contoh ->     4 > 2 mengembalikan true.
+              4 > 5 mengembalikan false.
+              4 > 4 mengembalikan false.
+
+
+Operator ->   Lebih dari atau Sama dengan (>=)
+Deskripsi ->  Membandingkan dua operan, apakah operan pertama lebih dari atau sama dengan operan kedua? 
+              Jika pernyataan benar, mengembalikan true, sebaliknya false.
+Notasi ->     operan1 >= operan2
+Contoh ->     4 >= 2 mengembalikan true.
+              4 >= 5 mengembalikan false.
+              4 >= 4 mengembalikan true.
+              
+
+Operator ->   Kurang dari (<)
+Deskripsi ->  Membandingkan dua operan, apakah operan pertama kurang dari operan kedua? Jika pernyataan benar, mengembalikan true, sebaliknya false.
+Notasi ->     operan1 < operan2
+Contoh ->     4 < 2 mengembalikan false.
+              4 < 5 mengembalikan true.
+              4 < 4 mengembalikan false.
+
+
+Operator ->   Kurang dari atau Sama dengan (<=)
+Deskripsi ->  Membandingkan dua operan, apakah operan pertama kurang dari atau sama dengan operan kedua? Jika pernyataan benar, mengembalikan true, sebaliknya false.
+Notasi ->     operan1 <= operan2
+
+Contoh ->     4 <= 2 mengembalikan false.
+              4 <= 5 mengembalikan true.
+              4 <= 4 mengembalikan true.
+              
+Berikut adalah contoh kode yang menunjukkan berbagai penggunaan operator perbandingan dalam JavaScript.
+
+--------------------------------------------------------------------
+const a = 10;
+const b = 12;
+ 
+console.log(a < b); // output: true
+console.log(a > b); // output: false
+--------------------------------------------------------------------  
+
+Logical Operator
+
+Operator ->   AND (&&)
+Deskripsi ->  Binary operator yang menghasilkan nilai true apabila kedua operan bernilai true (atau truthy). Jika salah satu
+              operan bernilai false (atau falsy), operasi akan mengembalikan false.
+Notasi ->     operand1 && operand2
+Contoh ->     true && true menghasilkan true.
+              false && true menghasilkan false.
+              true && false menghasilkan false.
+              false && false menghasilkan false.
+
+
+Operator ->   OR ( || )
+Deskripsi ->  Binary operator yang menghasilkan nilai true apabila salah satu operan bernilai true (atau truthy). 
+              Jika kedua operan bernilai false (atau falsy), operasi akan mengembalikan false.
+Notasi ->     operand1 || operand2
+Contoh ->     true || true menghasilkan true.
+              false || true menghasilkan true.
+              true || false menghasilkan true.
+              false || false menghasilkan false.
+
+
+
+Operator ->   NOT (!)
+Deskripsi ->  Unary operator yang mengubah operan bernilai true menjadi false dan false menjadi true.
+Notasi ->     !operan
+Contoh ->     !true menghasilkan false.
+              !false menghasilkan true.
+              !(1 > 2) menghasilkan true.
+              !(4 === 4) menghasilkan false.
+Berikut adalah contoh kode yang menunjukkan berbagai penggunaan operator logika dalam JavaScript.
+
+--------------------------------------------------------------------
+console.log(true && false); // false
+console.log(false && false); // false
+console.log((5 === 5) && (3 < 5)); // true
+ 
+// OR
+console.log(true || true); // true
+console.log(false || true); // true
+console.log(true || false); // true
+console.log(false || false); // false
+console.log((5 === 5) || (3 > 5)); // true
+ 
+// NOT
+console.log(!true); // false
+console.log(!false); // true
+--------------------------------------------------------------------
+
+
+String Operator
+
+Operator string adalah operator yang digunakan untuk menggabungkan dua nilai string. 
+Operator ini menggunakan simbol + dan termasuk dalam kategori binary operator.
+
+Berikut adalah contoh penggunaan operator string untuk menggabungkan dua nilai string.
+
+--------------------------------------------------------------------
+const first = 'bekerja';
+const second = 'sama';
+const merged = first + second;
+ 
+console.log(merged); // Output: bekerjasama
+--------------------------------------------------------------------
+
+
+Pengertian Function 
+
+
+
+
+--------------------------------------------------------------------
+const temperatureInCelsius = 80;
+const temperatureInFahrenheit = 9 / 5 * temperatureInCelsius + 32;
+
+console.log('Hasil konversi:', temperatureInFahrenheit);
+
+/* Output:
+Hasil konversi: 176
+*/
+--------------------------------------------------------------------
+
+
+Contoh kode penerapan Function
+
+--------------------------------------------------------------------
+let temperatureInCelsius;
+let temperatureInFahrenheit;
+
+temperatureInCelsius = 50;
+temperatureInFahrenheit = 9 / 5 * temperatureInCelsius + 32;
+console.log('Hasil konversi:', temperatureInFahrenheit); // output -> Hasil konversi: 122
+
+temperatureInCelsius = 70;
+temperatureInFahrenheit = 9 / 5 * temperatureInCelsius + 32;
+console.log('Hasil konversi:', temperatureInFahrenheit); // output -> Hasil konversi: 158
+
+temperatureInCelsius = 100;
+temperatureInFahrenheit = 9 / 5 * temperatureInCelsius + 32;
+console.log('Hasil konversi:', temperatureInFahrenheit); // output -> Hasil konversi: 212
+--------------------------------------------------------------------
+
+#CATATAN : "LET" digunakan agar data bisa di ubah
+
+
+
+Deklarasi Function
+Pembuatan function sebetulnya mirip dengan pembuatan variabel. Dalam variabel, nilai dapat kita akses dengan 
+menyebutkan nama variabelnya. Hal ini karena memang kita menyimpan atau mengikat nilai dalam variabel tersebut. 
+Sebuah function juga diikat dalam sebuah nama function. Dengan kata lain, 
+// nama function tersebut adalah identifier.
+
+Function -> Function Keyword
+greetWorld() -> Identifier
+console.log('Hello,WOrd'); -> Function Body
+
+Keyword “function” harus selalu disertakan ketika mendeklarasikan function.
+
+Berikut contoh penggunaan Function 
+--------------------------------------------------------------------
+function convertCelsiusToFahrenheit(temperature) {
+  const temperatureInFahrenheit = 9 / 5 * temperature + 32;
+ 
+  console.log('Hasil konversi:', temperatureInFahrenheit);
+}
+--------------------------------------------------------------------
+
+
+Parameter dan Argument
+--------------------------------------------------------------------
+function convertCelsiusToFahrenheit(temperature) {
+  const temperatureInFahrenheit = 9 / 5 * temperature + 32;
+ 
+  console.log('Hasil konversi:', temperatureInFahrenheit);
+}
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+// Langsung memasukkan nilai
+convertCelsiusToFahrenheit(100);
+ 
+// Memasukkan nilai dengan variabel
+const temperatureInCelsius = 90;
+convertCelsiusToFahrenheit(temperatureInCelsius);
+--------------------------------------------------------------------
+
+Default Parameter
+
+--------------------------------------------------------------------
+function convertCelsiusToFahrenheit(temperature) {
+  const temperatureInFahrenheit = (9 / 5) * temperature + 32;
+  console.log('Hasil konversi:', temperatureInFahrenheit);
+}
+
+convertCelsiusToFahrenheit();
+
+/* Output:
+Hasil konversi: NaN
+*/
+--------------------------------------------------------------------
+Hasilnya bisa NaN (Not-a-Number) karena pada variabel temperature sebelum operator +, jika variabel di ganti dengan
+angka maka kode akan bisa berjalan semestinya
+
+
+--------------------------------------------------------------------
+function convertCelsiusToFahrenheit(temperature = 50) {
+  const temperatureInFahrenheit = 9 / 5 * temperature + 32;
+
+  console.log('Hasil konversi:', temperatureInFahrenheit);
+}
+
+// Menggunakan default value
+convertCelsiusToFahrenheit(); // output: Hasil konversi: 122
+
+// Menggantikan default value
+convertCelsiusToFahrenheit(90); // output: Hasil konversi: 194
+--------------------------------------------------------------------
+Dapat di perhatikan bagian atas , (temperature = 50) saat ketambah sintak (= 50) maka variabel temperature
+dapat dipastkan 50 
+
+Return Value
+
+
+Function Expression
+Function expression terdiri dari dua kata, yaitu "function" dan "expression". Kita sudah mengenal function, 
+begitu juga dengan expression. Lantas, function expression dapat kita artikan sebagai kode yang mengembalikan 
+nilai function.
+
+
+Menjadi First-Class Citizen
+
+--------------------------------------------------------------------
+function multiply(a, b) {
+  return a * b;
+}
+
+function calculate(operation, numA, numB) {
+  return operation(numA, numB);
+}
+
+const result = calculate(multiply, 2, 4);
+console.log(result);
+
+/* Output:
+8
+*/
+--------------------------------------------------------------------
+
+Arrow Function
+Function expression benar-benar bisa mengubah cara kita membuat function. Namun, ada alternatif sintaksis lain 
+dalam JavaScript yang bisa lebih mengubah cara kita membuat function. 
+Deklarasi
+--------------------------------------------------------------------
+function multiplier(x) {
+  return function (num) {
+    return x * num;
+  };
+}
+
+const double = multiplier(2);
+const triple = multiplier(3);
+
+console.log(double(10));
+console.log(triple(11));
+
+/* Output:
+20
+33
+*/
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+let temperatureInFahrenheit = null;
+
+// Deklarasi function dengan Regular Function
+const ubahCkeF_FunctionBiasa = function (temperature) {
+  const result = (9 / 5) * temperature + 32;
+    return result;
+};
+
+temperatureInFahrenheit = ubahCkeF_FunctionBiasa(90);
+console.log('Hasil konversi:', temperatureInFahrenheit);
+// Hasil ==> Hasil konversi: 194
+
+// Deklarasi Function dengan Arrow Function
+const ubahCkeF_ArrowFunction = (temperature) => {
+  const result = (9 / 5) * temperature + 32;
+    return result;
+};
+
+temperatureInFahrenheit = ubahCkeF_ArrowFunction(90);
+console.log('Hasil konversi:', temperatureInFahrenheit);
+// Hasil ==> Hasil konversi: 194
+// Regular function adalah cara penulisan function yang telah kita gunakan sebelumnya, 
+        // sedangkan arrow function adalah cara lain dalam membuat function.
+--------------------------------------------------------------------
+
+Menstrukturkan Data dengan Object
+
+Object adalah kumpulan pasangan key-value dan merupakan tipe data yang bukan primitif. Jika tipe data primitif 
+hanya dapat menyimpan satu jenis data seperti string atau number, tipe data object dapat menyimpan data yang 
+beragam dan kompleks. 
+
+Membuat Object
+1. const user = {};
+2. const products = { name: 'Sepatu', price: 230000 };
+
+
+
+
