@@ -16,6 +16,15 @@
  *    yang diberikan argumen name = 'Indra' tanpa memberikan nilai origin.
 */
 
+// 1. Buatlah sebuah fungsi bernama `hello` yang menerima 2 argumen: `name` dan `origin`.
 function HelloWorld(name , origin ='Bandung') {
 
+// 2. Kembalikan fungsi tersebut dengan nilai string dengan templat:
+    return 'Halo! Nama saya  {$name} . Saya tinggal di ${origin}.';
 }
+
+// 4. Buatlah variabel bernama `rahmat` yang menampung nilai dari hasil pemanggilan fungsi `hello`
+const rahmat = HelloWorld('Rahmat', 'Semarang');
+
+// 5. Buatlah variabel bernama `indra` yang menampung nilai dari hasil pemanggilan fungsi `hello`
+const indra = HelloWorld('Indra');
