@@ -839,5 +839,71 @@ Membuat Object
 2. const products = { name: 'Sepatu', price: 230000 };
 
 
+Properti memiliki key dan value. Key dari properti dapat berupa string dan value dapat bernilai tipe data apa pun, 
+seperti string, number, atau boolean. Properti yang ada di dalam object dipisahkan oleh koma.
+
+
+Contoh kode :
+--------------------------------------------------------------------
+const user = {
+  name: 'Dicoding',
+  'last name': 'Indonesia',
+  age: 9,
+};
+
+console.log(user);
+
+
+output : { name: 'Dicoding', 'last name': 'Indonesia', age: 9 }
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+const user = {
+  name: 'Dicoding',
+  lastname: 'Indonesia',
+  age: 9,
+};
+
+console.log(user.name); // Output: Dicoding
+--------------------------------------------------------------------
+
+Kita dapat memanggil nama object, kemudian menuliskan tanda titik yang diikuti dengan nama propertinya. 
+
+
+
+Mengakses menggunakan square bracket
+Untuk menutupi kekurangan menggunakan dot notation, ada cara lain yaitu menggunakan square bracket.
+Contoh:
+--------------------------------------------------------------------
+const user = {
+  name: 'Dicoding',
+  'last name': 'Indonesia',
+  age: 9,
+};
+
+console.log(user['last name']); // Output: Indonesia
+
+setelah saya pelajari ternyata bisa menggunakan
+
+
+const user = {
+  name: 'Dicoding',
+  lastname: 'Indonesia',
+  age: 9,
+};
+
+console.log(user.lastname); // Output: Indonesia
+
+"PERHATIKAN PENULISAN KEDUA KODE TERSEBUT, PASTI KAU AKAN PAHAM DI BAGIAN LAST NAME"
+--------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
