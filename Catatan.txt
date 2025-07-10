@@ -1005,7 +1005,7 @@ console.log(user); // Output: { name: 'Dicoding', lastName: 'Indonesia' }
 
 
 
-Menstrukturkan Data dengan Array
+Menstrukturkan Data dengan Array.
 Array adalah struktur data spesial yang dapat menyimpan kumpulan data yang terurut. Letak perbedaan array dengan 
 object adalah data yang disimpan di dalam array terurut, sedangkan di object tidak terurut. 
 Array dapat menyimpan nilai dengan tipe data apa pun, seperti number, object, dan string.
