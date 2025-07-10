@@ -872,7 +872,7 @@ console.log(user.name); // Output: Dicoding
 Kita dapat memanggil nama object, kemudian menuliskan tanda titik yang diikuti dengan nama propertinya. 
 
 
-
+=> Mengakses menggunakan dot
 Mengakses menggunakan square bracket
 Untuk menutupi kekurangan menggunakan dot notation, ada cara lain yaitu menggunakan square bracket.
 Contoh:
@@ -900,6 +900,122 @@ console.log(user.lastname); // Output: Indonesia
 --------------------------------------------------------------------
 
 
+Mengakses menggunakan object destructuring
+--------------------------------------------------------------------
+const user = {
+  'name': 'Dicoding',
+  lastName: 'Indonesia',
+  age: 9
+};
+
+const { name, lastName } = user;
+console.log(name, lastName); // Output: Dicoding Indonesia
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+const user = {
+  'name': 'Dicoding',
+  lastName: 'Indonesia',
+  age: 9
+};
+
+const { name, lastName, isMale = false } = user;
+console.log(isMale); // Output: false
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+const user = {
+  id: 24,
+  email: 'aras@dicoding.com',
+  name: 'Arsy',
+  nickname: 'Aras',
+  username: 'aras123',
+  password: 'secret',
+};
+
+const { id, email } = user;
+
+console.log(id, email);
+--------------------------------------------------------------------
+
+Mengubah Nilai di Properti Object
+--------------------------------------------------------------------
+const account = {
+  balance: 1000,
+  debt: 10,
+};
+
+account.balance = 2000;
+console.log(account.balance); // Output: 2000
+--------------------------------------------------------------------
+
+
+
+
+Menghapus Properti di Object
+--------------------------------------------------------------------
+const user = {
+  'name': 'Dicoding',
+  'last name': 'Indonesia',
+  age: 9,
+};
+
+delete user.age;
+console.log(user); // Output: { name: 'Dicoding', 'last name': 'Indonesia' }
+--------------------------------------------------------------------
+
+
+Mengubah Nilai di Properti Object
+--------------------------------------------------------------------
+const account = {
+  balance: 1000,
+  debt: 10,
+};
+
+account.balance = 2000;
+console.log(account.balance); // Output: 2000
+--------------------------------------------------------------------
+
+
+
+
+Menghapus Properti di Object
+--------------------------------------------------------------------
+const user = {
+  'name': 'Dicoding',
+  'last name': 'Indonesia',
+  age: 9,
+};
+
+delete user.age;
+console.log(user); // Output: { name: 'Dicoding', 'last name': 'Indonesia' }
+
+atau bisa menggunakan kode akhir yang beda menggunakan kode dot notation (.)
+
+const user = {
+  'name': 'Dicoding',
+  lastName: 'Indonesia',
+  age: 9,
+};
+
+delete user['age'];
+console.log(user); // Output: { name: 'Dicoding', lastName: 'Indonesia' }
+--------------------------------------------------------------------
+
+
+
+Menstrukturkan Data dengan Array
+Array adalah struktur data spesial yang dapat menyimpan kumpulan data yang terurut. Letak perbedaan array dengan 
+object adalah data yang disimpan di dalam array terurut, sedangkan di object tidak terurut. 
+Array dapat menyimpan nilai dengan tipe data apa pun, seperti number, object, dan string.
+--------------------------------------------------------------------
+const array = [1, 2];
+console.log(typeof array); // Output: object
+--------------------------------------------------------------------
+
+Pada array numbers, kita menambahkan angka 5 pada constructornya sehingga itu menjadi initial length dari array. 
+Meskipun sudah menetapkan panjangnya 5, kita masih bisa menambahkan dan menghapus element di array numbers tersebut.
 
 
 
