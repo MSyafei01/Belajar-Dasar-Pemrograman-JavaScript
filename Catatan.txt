@@ -1021,5 +1021,28 @@ Meskipun sudah menetapkan panjangnya 5, kita masih bisa menambahkan dan menghapu
 
 
 
+Menggunakan object constructor
+Array dapat dibuat dengan constructor new Array() seperti berikut.
+
+--------------------------------------------------------------------
+const users = new Array();
+const numbers = new Array(5);
+--------------------------------------------------------------------
+
+Array users merupakan array kosong yang belum memiliki element dan jika kita lihat di console akan menghasilkan [].
+--------------------------------------------------------------------
+const users = new Array();
+console.log(users);
+--------------------------------------------------------------------
+
+
+
+Menggunakan sintaks Array.from
+--------------------------------------------------------------------
+const bayan = Array.from('bayan');
+console.log(bayan); // Output: [ 'b', 'a', 'y', 'a', 'n' ]
+--------------------------------------------------------------------
+Array.from merupakan method untuk membuat array yang diperkenalkan di ES6. Array.from 
+juga dapat dimanfaatkan untuk menyalin array lainnya seperti berikut ini.
 
 
