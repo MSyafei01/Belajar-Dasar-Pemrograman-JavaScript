@@ -22,4 +22,20 @@ console.log('Hasil konversi:', temperatureInFahrenheit);
 // Regular function adalah cara penulisan function yang telah kita gunakan sebelumnya, 
         // sedangkan arrow function adalah cara lain dalam membuat function.
 
-        
+
+const user = {
+  id: 24,
+  email: 'aras@dicoding.com',
+  name: 'Arsy',
+  nickname: 'Aras',
+  username: 'aras123',
+  password: 'secret',
+};
+
+const id = user.id;
+const email = user.email;
+
+console.log(id, email);
+
+
+

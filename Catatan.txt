@@ -839,5 +839,210 @@ Membuat Object
 2. const products = { name: 'Sepatu', price: 230000 };
 
 
+Properti memiliki key dan value. Key dari properti dapat berupa string dan value dapat bernilai tipe data apa pun, 
+seperti string, number, atau boolean. Properti yang ada di dalam object dipisahkan oleh koma.
+
+
+Contoh kode :
+--------------------------------------------------------------------
+const user = {
+  name: 'Dicoding',
+  'last name': 'Indonesia',
+  age: 9,
+};
+
+console.log(user);
+
+
+output : { name: 'Dicoding', 'last name': 'Indonesia', age: 9 }
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+const user = {
+  name: 'Dicoding',
+  lastname: 'Indonesia',
+  age: 9,
+};
+
+console.log(user.name); // Output: Dicoding
+--------------------------------------------------------------------
+
+Kita dapat memanggil nama object, kemudian menuliskan tanda titik yang diikuti dengan nama propertinya. 
+
+
+=> Mengakses menggunakan dot
+Mengakses menggunakan square bracket
+Untuk menutupi kekurangan menggunakan dot notation, ada cara lain yaitu menggunakan square bracket.
+Contoh:
+--------------------------------------------------------------------
+const user = {
+  name: 'Dicoding',
+  'last name': 'Indonesia',
+  age: 9,
+};
+
+console.log(user['last name']); // Output: Indonesia
+
+setelah saya pelajari ternyata bisa menggunakan
+
+
+const user = {
+  name: 'Dicoding',
+  lastname: 'Indonesia',
+  age: 9,
+};
+
+console.log(user.lastname); // Output: Indonesia
+
+"PERHATIKAN PENULISAN KEDUA KODE TERSEBUT, PASTI KAU AKAN PAHAM DI BAGIAN LAST NAME"
+--------------------------------------------------------------------
+
+
+Mengakses menggunakan object destructuring
+--------------------------------------------------------------------
+const user = {
+  'name': 'Dicoding',
+  lastName: 'Indonesia',
+  age: 9
+};
+
+const { name, lastName } = user;
+console.log(name, lastName); // Output: Dicoding Indonesia
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+const user = {
+  'name': 'Dicoding',
+  lastName: 'Indonesia',
+  age: 9
+};
+
+const { name, lastName, isMale = false } = user;
+console.log(isMale); // Output: false
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+const user = {
+  id: 24,
+  email: 'aras@dicoding.com',
+  name: 'Arsy',
+  nickname: 'Aras',
+  username: 'aras123',
+  password: 'secret',
+};
+
+const { id, email } = user;
+
+console.log(id, email);
+--------------------------------------------------------------------
+
+Mengubah Nilai di Properti Object
+--------------------------------------------------------------------
+const account = {
+  balance: 1000,
+  debt: 10,
+};
+
+account.balance = 2000;
+console.log(account.balance); // Output: 2000
+--------------------------------------------------------------------
+
+
+
+
+Menghapus Properti di Object
+--------------------------------------------------------------------
+const user = {
+  'name': 'Dicoding',
+  'last name': 'Indonesia',
+  age: 9,
+};
+
+delete user.age;
+console.log(user); // Output: { name: 'Dicoding', 'last name': 'Indonesia' }
+--------------------------------------------------------------------
+
+
+Mengubah Nilai di Properti Object
+--------------------------------------------------------------------
+const account = {
+  balance: 1000,
+  debt: 10,
+};
+
+account.balance = 2000;
+console.log(account.balance); // Output: 2000
+--------------------------------------------------------------------
+
+
+
+
+Menghapus Properti di Object
+--------------------------------------------------------------------
+const user = {
+  'name': 'Dicoding',
+  'last name': 'Indonesia',
+  age: 9,
+};
+
+delete user.age;
+console.log(user); // Output: { name: 'Dicoding', 'last name': 'Indonesia' }
+
+atau bisa menggunakan kode akhir yang beda menggunakan kode dot notation (.)
+
+const user = {
+  'name': 'Dicoding',
+  lastName: 'Indonesia',
+  age: 9,
+};
+
+delete user['age'];
+console.log(user); // Output: { name: 'Dicoding', lastName: 'Indonesia' }
+--------------------------------------------------------------------
+
+
+
+Menstrukturkan Data dengan Array.
+Array adalah struktur data spesial yang dapat menyimpan kumpulan data yang terurut. Letak perbedaan array dengan 
+object adalah data yang disimpan di dalam array terurut, sedangkan di object tidak terurut. 
+Array dapat menyimpan nilai dengan tipe data apa pun, seperti number, object, dan string.
+--------------------------------------------------------------------
+const array = [1, 2];
+console.log(typeof array); // Output: object
+--------------------------------------------------------------------
+
+Pada array numbers, kita menambahkan angka 5 pada constructornya sehingga itu menjadi initial length dari array. 
+Meskipun sudah menetapkan panjangnya 5, kita masih bisa menambahkan dan menghapus element di array numbers tersebut.
+
+
+
+
+
+Menggunakan object constructor
+Array dapat dibuat dengan constructor new Array() seperti berikut.
+
+--------------------------------------------------------------------
+const users = new Array();
+const numbers = new Array(5);
+--------------------------------------------------------------------
+
+Array users merupakan array kosong yang belum memiliki element dan jika kita lihat di console akan menghasilkan [].
+--------------------------------------------------------------------
+const users = new Array();
+console.log(users);
+--------------------------------------------------------------------
+
+
+
+Menggunakan sintaks Array.from
+--------------------------------------------------------------------
+const bayan = Array.from('bayan');
+console.log(bayan); // Output: [ 'b', 'a', 'y', 'a', 'n' ]
+--------------------------------------------------------------------
+Array.from merupakan method untuk membuat array yang diperkenalkan di ES6. Array.from 
+juga dapat dimanfaatkan untuk menyalin array lainnya seperti berikut ini.
 
 
