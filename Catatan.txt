@@ -1046,3 +1046,240 @@ Array.from merupakan method untuk membuat array yang diperkenalkan di ES6. Array
 juga dapat dimanfaatkan untuk menyalin array lainnya seperti berikut ini.
 
 
+Menghapus Element dan Data Array
+
+--------------------------------------------------------------------
+let myArray = ['Android', 'Data Science', 'Web'];
+delete myArray[1];
+console.log(myArray); 
+// Output: ['Android', <1 empty item>, 'Web']
+--------------------------------------------------------------------
+
+Data pada array sudah berhasil dihapus, tetapi element-nya masih ada. Lalu, 
+bagaimana cara untuk menghapus element dan datanya? Untuk melakukan hal itu dapat dilakukan dengan menggunakan 
+method splice() seperti berikut ini.
+
+--------------------------------------------------------------------
+let myArray = ['Android', 'Data Science', 'Web'];
+myArray.splice(1, 1);
+console.log(myArray); // Output: ['Android', 'Web']
+--------------------------------------------------------------------
+
+Method splice membutuhkan dua parameter yaitu indeks dari element yang ingin dihapus dan jumlah element 
+yang ingin dihapus. Pada contoh di atas, kita menghapus element indeks ke-1 dan jumlah element yang dihapus 
+adalah 1.
+
+--------------------------------------------------------------------
+let myArray = ['Android', 'Data Science', 'Web'];
+myArray.splice(1, 2);
+console.log(myArray); // Output: ['Android']
+--------------------------------------------------------------------
+
+
+
+
+
+Array Destructuring
+-> Destructuring digunakan untuk melihat isi dari array. Destructuring cukup mudah dilakukan yaitu dengan 
+menggunakan kurung siku yang di dalamnya adalah nama variabel yang kita assign. Kemudian diikuti dengan 
+assignment operator sama dengan (=) dan array yang ingin diambil nilainya.
+
+--------------------------------------------------------------------
+const introduction = ['Hello', 'Arsy'];
+const [greeting, name] = introduction;
+console.log(greeting); // Output: Hello
+--------------------------------------------------------------------
+
+
+Array Method
+-> Perlu diketahui bahwa array memiliki banyak sekali method atau fungsi bawaan yang dapat digunakan 
+untuk memudahkan proses pengelolaan atau penggunaannya. 
+
+Reverse
+-> Reverse adalah method yang digunakan untuk membalikkan nilai array. Metode reverse() mengembalikan array 
+dengan element yang dibalik.
+
+--------------------------------------------------------------------
+const myArray = ['Android', 'Data Science', 'Web'];
+myArray.reverse();
+console.log(myArray); // Output: [ 'Web', 'Data Science', 'Android' ]
+--------------------------------------------------------------------
+
+
+
+Sort
+-> Sort adalah method yang digunakan untuk mengurutkan nilai array. 
+Loh, katanya array sudah menyimpan data secara terurut kok masih perlu mengurutkan array menggunakan sort? 
+Memang array sudah mengurutkan data sesuai dengan indeks-nya tetapi mengurutkan berdasarkan indeks saja belum cukup.
+
+--------------------------------------------------------------------
+const myArray = ['Web', 'Android', 'Data Science'];
+myArray.sort();
+console.log(myArray); // Output: [ 'Android', 'Data Science', 'Web' ]
+--------------------------------------------------------------------
+
+
+
+Membuat Map
+--------------------------------------------------------------------
+const map = new Map();
+--------------------------------------------------------------------
+
+
+Pengisian kode Map
+--------------------------------------------------------------------
+const productMap = new Map([
+  ['shoes', 500],
+  ['cap', 350],
+  ['jeans', 250]
+]);
+
+console.log(productMap);
+// Map(3) { 'shoes' => 500, 'cap' => 350, 'jeans' => 250 }
+--------------------------------------------------------------------
+
+
+Menyimpan Nilai di Map
+--------------------------------------------------------------------
+const map = new Map();
+map.set('name', 'aras');
+console.log(map); // Map(1) { 'name' => 'aras' }
+// Output Map(3) { 'shoes' => 500, 'cap' => 350, 'jeans' => 250 }
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+const map = new Map();
+map.set(1, 'number one');
+console.log(map); // Map(1) { 1 => 'number one' }
+// Output Map(1) { 'name' => 'aras' }
+--------------------------------------------------------------------
+
+Mengakses Nilai di Map
+--------------------------------------------------------------------
+const map = new Map();
+map.set('name', 'aras');
+console.log(map.get('name')); // Output: aras
+// Output aras
+--------------------------------------------------------------------
+
+
+Menghapus Nilai di Map
+--------------------------------------------------------------------
+const map = new Map();
+map.set('name', 'aras');
+map.set('last name', 'opraza');
+map.delete('last name');
+console.log(map); // Map(1) { 'name' => 'aras' }
+// Output Map(1) { 'name' => 'aras' }
+--------------------------------------------------------------------
+
+
+Spread Operator
+Spread, memiliki arti sesuai dengan namanya, yaitu menyebarkan. Spread operator digunakan untuk menyebarkan 
+nilai yang ada pada object dan array. Spread operator yang ditandai dengan sintaks tiga titik  (...) adalah fitur 
+yang menarik dan membantu dalam pengelolaan object dan array.
+
+
+Object
+Spread operator di object dapat dilakukan seperti berikut ini.
+--------------------------------------------------------------------
+const obj1 = { name: 'Dicoding' };
+const obj2 = { lastName: 'Indonesia', address: 'Jl. Batik Kumeli No 50' };
+const newObj = { ...obj1, ...obj2 };
+
+console.log(newObj); // Output: { name: 'Dicoding', lastName: 'Indonesia', address: 'Jl. Batik Kumeli No 50' }
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+const originalObj = { name: 'Dicoding', age: 9 };
+const copiedObj = { ...originalObj };
+
+console.log(copiedObj); // Output: { name: 'Dicoding', age: 9 }
+--------------------------------------------------------------------
+
+
+Array
+--------------------------------------------------------------------
+const array1 = ['Dicoding'];
+const array2 = ['Indonesia', 'Jl. Batik Kumeli No 50'];
+const newArray = [...array1, ...array2];
+
+console.log(newArray); // Output: ['Dicoding', 'Indonesia', 'Jl. Batik Kumeli No 50']
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+const original = ['apple', 'banana', 'cherry'];
+const copy = [...original];
+
+console.log(copy); // Output: ['apple', 'banana', 'cherry']
+--------------------------------------------------------------------
+
+Rest Operator
+Masalah terjadi ketika argument-nya sudah melebihi dua karena terlalu banyak argument pada function membuat kode 
+menjadi tidak bersih (tidak sesuai prinsip clean code) sehingga sulit untuk dibaca dan di-maintenance.
+
+Solusinya adalah menggunakan rest operator. Rest operator memungkinkan function untuk menerima argument dalam 
+bentuk array. Rest operator yang digunakan pada parameter fungsi sering disebut sebagai Rest Parameter.
+
+--------------------------------------------------------------------
+function myFunc(...name) {
+  console.log('name:', name);
+}
+
+myFunc('Rafy', 'Fikri', 'Dimas');
+--------------------------------------------------------------------
+
+Rest parameter memungkinkan kita untuk menulis argument yang tak terbatas pada function. 
+Rest parameter akan menangani argument tersebut menjadi sebuah array dan meneruskannya ke function.
+
+--------------------------------------------------------------------
+function myFunc(number, ...name) {
+  console.log('number', number);
+  console.log('name', name);
+}
+Karena rest parameter menangani argument sebagai array, method array.length juga dapat digunakan pada rest parameter seperti berikut ini.
+myFunc('one', 'Arsy', 'Aras');
+--------------------------------------------------------------------
+
+Karena rest parameter menangani argument sebagai array, method array.length juga dapat digunakan pada 
+rest parameter seperti berikut ini.
+--------------------------------------------------------------------
+function myFunc(...name) {
+  console.log(name.length);
+  console.log('name', name);
+}
+
+myFunc('Adi', 'Nur', 'Arif');
+// Output name [ 'Adi', 'Nur', 'Arif' ]
+--------------------------------------------------------------------
+
+
+
+Tak hanya method array.length, kita juga dapat menggunakan method array lainnya pada rest parameter.
+
+Selain pada parameter fungsi, rest operator juga kerap digunakan ketika kita melakukan destructuring array untuk 
+menangkap seluruh sisa elemen terakhir dalam bentuk array.
+
+--------------------------------------------------------------------
+const favorites = ['Nasi Goreng', 'Mie Goreng', 'Ayam Bakar', 'Tahu', 'Tempe'];
+
+const [first, second, ...rest] = favorites;
+
+console.log(first);
+console.log(second);
+console.log(rest);
+
+/**
+ * output:
+ * Nasi Goreng
+ * Mie Goreng
+ * [ 'Ayam Bakar', 'Tahu', 'Tempe' ]
+ */
+--------------------------------------------------------------------
+
+
+
+
+
