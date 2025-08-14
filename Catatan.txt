@@ -1855,7 +1855,113 @@ exceptions ketika grades bukanlah number.
 Try-Catch digunakan untuk menangani exception ketika function checkGrades error. Di saat function checkGrades 
 menerima argument berupa string, maka blok catch akan dibangkitkan dan menampilkan pesan error di terminal/console.
 
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
 
+Pengantar Modularisasi Harmonis
+“Coding like poetry should be short and concise.”  - Santosh Kalwar, Computer Scientist.
+Tujuan dari memecah kode agar mudah dibaca dan ringkas. Modularisasi dapat membantu Anda untuk memecah kode 
+program Anda sehingga lebih terstruktur
+
+Berikut adalah objektif pembelajaran yang akan dicapai pada modul ini.
+
+=> Menjelaskan sebuah masalah yang dapat dipecahkan dengan teknik modularisasi.
+=> Membedakan antara default export dan named exports, begitu juga dengan default import dan named imports.
+=> Mengidentifikasi "module" dalam konteks JavaScript.
+=> Mengimplementasikan modularisasi untuk mengekspor function, variable, atau nilai lain di dalam sebuah module.
+=> Menggunakan nilai function, variable, atau nilai lain yang diimpor dari sebuah module.
+
+Mengenal Modularisasi
+=> Modularisasi adalah cara kita untuk memecahkan kode program yang kompleks dan besar menjadi bentuk yang lebih 
+sederhana dan ringkas.
+
+=> Implementasi dari modularisasi di JavaScript adalah dengan membuat berkas-berkas terpisah per bagian 
+function/method yang disebut dengan modul.
+
+Import memungkinkan kita untuk memasukkan function/method/variable dari modul lain. 
+Export memungkinkan kita untuk mengeluarkan function/method/variable ke modul lain agar dapat digunakan.
+
+
+Import
+=> JavaScript memungkinkan kita untuk menggunakan function/method dari modul lainnya dengan dua syarat
+==> Harus meng-import function/method tersebut.
+==> Function/method tersebut sudah di-export (export akan dibahas di materi selanjutnya).
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+          main.mjs                                          anotherfile.mjs
+import myFunction from './anotherfile.mjs';   | export default function myFunction() {
+                                              |   console.log('Ini adalah function export default.');}
+myFunction();                                 |
+                                              |
+                                              |
+                                              |
+
+Output : Ini adalah function export default.
+----------------------------------------------------------------------------------------------------------------------------------------
+Pada contoh di atas, export default-nya adalah myFunction. Default import juga memungkinkan kita untuk import 
+function/method/variable yang namanya tidak harus sama dengan function/method/variable aslinya.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+        main.mjs                                          anotherfile.mjs
+import result from './anotherfile.mjs';   | export default function myFunction() {
+                                          |  console.log('Ini adalah function export default.');} 
+result();                                 |
+                                          |
+Output : Ini adalah function export default.
+----------------------------------------------------------------------------------------------------------------------------------------
+Apa pun nama yang kita tulis ketika mengimpor function dari berkas anotherFile.mjs di main.mjs, function 
+MyFunction akan tetap terimport. 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+      main.mjs                                                  anotherfile.mjs
+import {myFunction} from './anotherfile.mjs';   | export  function myFunction() {
+                                                |  console.log('Ini adalah contoh named import.');}
+                                                | 
+myFunction();                                   |
+
+Output : Ini adalah function export default.
+----------------------------------------------------------------------------------------------------------------------------------------
+Ketika menggunakan named import, selain memastikan nama function sesuai, kita juga akan menuliskan 
+nama function yang diimpor dalam kurung kurawal {}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+      main.mjs                                                  anotherfile.mjs
+import {name, email, age} from './anotherfile.mjs';   | const name = 'Jhon'; 
+console.log (name);                                   | const email = 'jhonabc@gmail.com' ;
+console.log (email);                                  | const age = '20'
+console.log (age);                                    | 
+                                                      | export {name, email, age};
+                                                  
+Output : Name : Jhon
+        Emain : jhonabc@gmail.com
+        age : 20                                  
+----------------------------------------------------------------------------------------------------------------------------------------
+Apa yang dilakukan pada contoh di atas sebenarnya sah-sah saja. Namun, ada cara lainnya yaitu menggunakan import 
+*. Import * dapat dilakukan ketika function/method/variable yang ingin kita impor dari modul yang sama sangat banyak.
+
+
+
+
+Jika function/method/variable yang ingin kita import sangat banyak, kita dapat menggunakan import *. 
+Perhatikan contoh berikut.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+import * as variable from './anotherfile.mjs';  |  cost name  = jhon
+                                                |  cost email = jhoneabc@gmail.com
+console.log(variable.name);                     |  cost age   = 20
+console.log(variable.email);                    | 
+console.log(variable.age);                      |
+
+export {name,email,age} ;
+
+output : jhon
+jhonabc@gmail.com
+20
+----------------------------------------------------------------------------------------------------------------------------------------
 
 
 
