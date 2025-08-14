@@ -1277,7 +1277,583 @@ console.log(rest);
  * Mie Goreng
  * [ 'Ayam Bakar', 'Tahu', 'Tempe' ]
  */
+
 --------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+Flow Controls
+
+--------------------------------------------------------------------
+const number = 100;
+console.log(number);
+output = 100
+--------------------------------------------------------------------
+ flow control adalah urutan bagaimana expression dan statement dijalankan oleh komputer berdasarkan kondisi dan 
+ logika tertentu (yang akan kita bahas di modul ini).
+
+
+Conditional
+Conditional flow adalah cara untuk menentukan apakah kode dieksekusi atau dilewatkan. Jika suatu kondisi terpenuhi, 
+kode akan dieksekusi dan kode yang lainnya akan diabaikan. Kondisi ini ditentukan dari inputan yang diberikan oleh 
+pengguna. 
+
+If Statement
+If statement merupakan fundamental statement yang memungkinkan JavaScript untuk membuat
+keputusan apakah mengeksekusi program atau tidak.
+
+--------------------------------------------------------------------
+if (expression)
+   statement
+--------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------
+const gajian = true;
+
+console.log('Berjalan-jalan di mal');
+if (gajian) {
+  console.log('Makan di restoran mal');
+}
+console.log('Pulang ke rumah');
+--------------------------------------------------------------------
+
+
+
+Ternary operator membutuhkan tiga operan dengan urutan seperti berikut:
+
+1. Kondisi yang ingin diperiksa ditulis sebelum tanda tanya (?)
+2. Ekspresi yang dieksekusi jika kondisinya benar.
+3. Ekspresi yang dieksekusi jika kondisi salah.
+
+--------------------------------------------------------------------
+const price = 100000;
+const isMember = true;
+const discount = isMember ? 0.1 : 0;
+
+console.log(`Anda mendapatkan discount sebesar ${discount * price}`);
+output : Anda mendapatkan discount sebesar 10000
+--------------------------------------------------------------------
+
+
+Switch Case
+Switch statement adalah control flow statement yang mengevaluasi expression terhadap beberapa kasus.
+Switch dapat menggantikan beberapa pengecekan kondisi yang dilakukan oleh if. Selain itu, menggunakan switch 
+membuat kode menjadi lebih readable dan ringkas. Inilah struktur dari switch case statement.
+
+Kode di atas memiliki variabel isMember dengan nilai true sehingga ketika dieksekusi akan mendapatkan discount 
+sebesar 0.1 atau 10%.
+
+--------------------------------------------------------------------
+switch (expression) {
+    statement }
+--------------------------------------------------------------------
+
+contoh penggunaan switch case di JavaScript.
+
+const fruit = 'apple';
+
+--------------------------------------------------------------------
+switch (fruit) {
+  case 'banana':
+    console.log('I am a banana.');
+    break;
+  case 'apple':
+    console.log('I am an apple.');
+    break;
+  case 'orange':
+    console.log('I am an orange.');
+    break;
+  case 'strawberry':
+    console.log('I am a strawberry.');
+    break;
+  default:
+    console.log('I am not a fruit. I am a programmer.');
+}
+--------------------------------------------------------------------
+
+Tanda kurung setelah keyword switch berisi variabel atau expression yang akan dievaluasi (sebuah kondisi). 
+Keyword case diikuti dengan nilai (banana/apple/orange/strawberry) yang ingin kita bandingkan dengan variabel 
+yang ada di dalam switch (fruit). Jika nilai yang ada di case sama dengan nilai yang ada di fruit, blok kode 
+setelah titik dua (:) akan dieksekusi. Selain itu, ada blok kode default yang berfungsi jika tidak ada nilai case 
+yang sama dengan nilai variabel pada switch. 
+
+
+Kini, Anda akan mulai berpikir dan bertanya. Apa bedanya dengan if-else? Toh, sama-sama melakukan pengecekan 
+kondisi. Sebenarnya, switch case memang melakukan hal yang sama dengan if/else, switch hanya menggantikan 
+penggunaan if yang berulang untuk mengecek kondisi. Perbedaan switch case dan if/else terdapat pada penulisan 
+sintaks yang lebih readable dan beberapa kasus penggunaan switch lebih efisien. Perhatikan contoh pengecekan 
+kondisi dengan if/else berikut ini.
+
+
+--------------------------------------------------------------------
+const day = new Date().getDay();
+if (day === 0) {
+  console.log('Minggu');
+} else if (day === 1) {
+  console.log('Senin');
+} else if (day === 2) {
+  console.log('Selasa');
+} else if (day === 3) {
+  console.log('Rabu');
+} else if (day === 4) {
+  console.log('Kamis');
+} else if (day === 5) {
+  console.log('Jumat');
+} else if (day === 6) {
+  console.log('Sabtu');
+} else {
+  console.log('Hari tidak valid');
+}
+--------------------------------------------------------------------
+
+Nilai variabel day berisi angka sesuai dengan hari ini. Kita akan mengecek kondisi secara berulang dengan
+ membandingkan nilai variabel day dengan yang ada di dalam if, dan ini merupakan hal yang sia-sia. Bandingkan 
+ jika kita menggunakan switch berikut ini.
+
+
+
+--------------------------------------------------------------------
+const day = new Date().getDay();
+
+switch (day) {
+  case 0:
+    console.log('Minggu');
+    break;
+  case 1:
+    console.log('Senin');
+    break;
+  case 2:
+    console.log('Selasa');
+    break;
+  case 3:
+    console.log('Rabu');
+    break;
+  case 4:
+    console.log('Kamis');
+    break;
+  case 5:
+    console.log('Jumat');
+    break;
+  case 6:
+    console.log('Sabtu');
+    break;
+  default:
+    console.log('Hari tidak valid');
+}
+--------------------------------------------------------------------
+
+Keyword break akan membuat pengecekan berhenti jika nilai variabel day sama dengan nilai yang ada case. 
+Jika menggunakan switch terlihat lebih ringkas dan mudah dibaca, kan? Switch sangat bagus digunakan ketika banyak 
+kondisi yang perlu dicek (misalnya pada contoh di atas), jika kondisi yang akan dicek masih sedikit misalnya hanya
+dua kondisi, gunakanlah if/else.
+
+Sebelumnya kita sudah singgung sedikit tentang penggunaan keyword break yang ada di switch case. Keyword break 
+berfungsi untuk menghentikan pengecekan kondisi sehingga blok kode yang ada di case lainnya tidak akan dijalankan. 
+Seandainya break lupa atau tidak ditulis, apa yang terjadi? Coba perhatikan kode berikut ini.
+
+
+--------------------------------------------------------------------
+const number = 2;
+
+switch (number) {
+case 1:
+  console.log('Ini 1');
+  break;
+case 2:
+  console.log('Ini 2');
+case 3:
+  console.log('Ini 3');
+  break;
+default:
+  console.log('Ini default');
+}
+--------------------------------------------------------------------
+Variabel number bernilai 2 sehingga kode yang ada di blok case 2 akan dieksekusi. Karena tidak ada keyword break 
+di blok kode tersebut, blok case selanjutnya akan dijalankan sehingga hasilnya menjadi seperti di bawah ini.
+
+
+--------------------------------------------------------------------
+Ini 2
+Ini 3
+--------------------------------------------------------------------
+
+
+
+Looping
+Ketika Anda memprogram, ada banyak sekali instruksi yang Anda tulis untuk dieksekusi oleh komputer.
+
+--------------------------------------------------------------------
+const foods = ['Nasi Goreng', 'Pasta', 'Sate'];
+
+console.log(foods[0]);
+console.log(foods[1]);
+console.log(foods[2]);
+output : Nasi Goreng, Pasta, Sate
+--------------------------------------------------------------------
+
+Hal tersebut memang memungkinkan, tetapi tidak praktis karena melakukan hal yang sama berulang. Lebih tidak 
+praktis lagi ketika list makanan tersebut berisi data 10 makanan atau bahkan 100 makanan. Sudah terbayang, kan? 
+Repot dan tidak praktisnya menulis kode secara berulang.
+
+Untuk menghindari hal itu, perkenalkan inilah looping. Looping (perulangan) adalah statements yang memungkinkan 
+kita untuk mengeksekusi kode yang sama secara berulang. Di JavaScript terdapat banyak jenis perulangan, seperti 
+for loop, for in, for of, while, dan do-while.
+
+
+For 
+For adalah cara looping yang paling umum dilakukan di JavaScript. Semenjak kehadiran ES6, for terbagi lagi 
+menjadi beberapa jenis. Saat ini, for terdiri dari for loop, for in, for of. Simak penjelasan berikut ini.
+
+
+For Loop
+Pertama, kita akan bahas for loop. Struktur dari for loop tampak seperti berikut ini.
+--------------------------------------------------------------------
+for (variabel awal; test kondisi; increment) {
+  // do something
+}
+--------------------------------------------------------------------
+
+Variabel awal adalah nilai variabel sebelum looping dilakukan. Test kondisi adalah evaluasi dari looping, 
+jika bernilai false, looping akan berhenti.
+
+
+--------------------------------------------------------------------
+for (let i = 0; i < 5; i++) {
+  console.log(`Angka ke-${i} adalah ${i}`);
+}
+
+Output : Angka ke-0 adalah 0
+Angka ke-1 adalah 1
+Angka ke-2 adalah 2
+Angka ke-3 adalah 3
+Angka ke-4 adalah 4
+--------------------------------------------------------------------
+Pada contoh di atas, nol merupakan nilai awal sebelum looping dijalankan. Pengecekan kondisi i < 5 sebelum looping, 
+ketika bernilai false, looping akan terhenti. Terakhir, i++ artinya adalah nilai i akan bertambah setiap looping 
+dilakukan.
+
+
+For In
+For in banyak digunakan untuk pengulangan pada object karena ia dapat melakukan iterasi ke seluruh data di dalam 
+objek. 
+
+--------------------------------------------------------------------
+const person = { name: 'Fulan', origin: 'Bandung', birthYear: 2024 };
+
+for (const property in person) {
+  console.log(`${property} bernilai ${person[property]}`);
+}
+Output : name bernilai Fulan
+origin bernilai Bandung
+birthYear bernilai 2024
+--------------------------------------------------------------------
+
+
+For Of
+Kehadiran for of dimulai pada ECMAScript 2015 (ES6). For of berbeda dengan for in. For of lebih sederhana karena 
+kita tidak perlu memikirkan property dan key.
+
+--------------------------------------------------------------------
+const names = ['Bebek', 'Ayam', 'Telor', 'Tempe'];
+
+for (const item of names) {
+  console.log(item);
+}
+Ouput : Bebek
+Ayam
+Telor
+Tempe
+--------------------------------------------------------------------
+
+Dengan for of datanya bisa kita dapatkan langsung tanpa menambahkan indeks atau nama propertinya seperti contoh 
+di atas. Sintaksnya lebih ringkas karena kita hanya perlu memanggil variabel item. Variabel item merupakan sebuah 
+variabel yang digunakan untuk menampung element dari array. For of dapat digunakan pada object yang bisa diiterasi 
+seperti arrays, strings, sets, dan maps.
+
+
+
+While
+Perulangan di JavaScript tak hanya menggunakan for, tetapi ada cara lainnya yaitu while statement. 
+While statement akan mengeksekusi statement ketika kondisinya bernilai truthy.
+
+--------------------------------------------------------------------
+while (condition) 
+     statement
+--------------------------------------------------------------------
+
+Iterasi akan berjalan ketika kondisi bernilai true. Oleh karena itu, perlu untuk berhati-hati ketika mengecek 
+kondisi tersebut.
+--------------------------------------------------------------------
+let i = 0;
+
+while (i < 5) {
+  console.log(`Angka ke-${i} adalah ${i}.`);
+  i++;
+}
+Output : Angka ke-0 adalah 0.
+Angka ke-1 adalah 1.
+Angka ke-2 adalah 2.
+Angka ke-3 adalah 3.
+--------------------------------------------------------------------
+
+
+While hanya peduli dengan kondisi yang kita berikan. Oleh karena itu, jangan lupa untuk mengubah kondisi tersebut,
+ misalnya pada contoh kita memberikan kondisi i < 5. Ketika while dieksekusi, jangan lupa untuk mengubah variabel 
+ i agar kondisinya berubah menjadi true atau false.
+
+
+--------------------------------------------------------------------
+let i = 0;
+
+while (i < 5) {
+  console.log(`Angka ke-${i} adalah ${i}.`);
+}
+
+Output : Angka ke-0 adalah 0.
+Angka ke-1 adalah 1.
+Angka ke-2 adalah 2.
+Angka ke-3 adalah 3.
+Angka ke-4 adalah 4.
+--------------------------------------------------------------------
+karena kita tidak mengubah nilai variabel i sehingga dia akan selalu bernilai 0 yang mana nol lebih kecil dari 
+lima (kondisi akan selalu true). 
+
+
+Keunggulan dari while adalah ia tidak perlu tahu jumlah data yang akan di-looping. 
+
+
+
+
+Control Statement
+Control statement berfungsi untuk menghentikan eksekusi kode. 
+Beberapa statement yang masuk ke dalam kategori control statement adalah break dan continue.
+
+
+Break
+Break statement adalah cara kita untuk memberitahukan interpreter yang sedang mengeksekusi kode untuk berhenti 
+dan langsung berpindah ke akhir dari percabangan atau perulangan. 
+
+--------------------------------------------------------------------
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break;
+  }
+
+  console.log(i);
+}
+Output : 0
+1
+2
+3
+4
+--------------------------------------------------------------------
+Contoh lainnya adalah penggunaan break pada switch case statement.
+
+--------------------------------------------------------------------
+const number = 1;
+
+switch (number) {
+  case 1:
+    console.log('Ini 1');
+    break;
+  case 2:
+    console.log('Ini 2');
+    break;
+  case 3:
+    console.log('Ini 3');
+    break;
+  default:
+    console.log('Ini default');
+}
+Output : Ini 1
+--------------------------------------------------------------------
+Di saat kondisi case terpenuhi maka program akan berhenti dan tidak akan melakukan pengecekan pada case berikutnya.
+
+
+
+Continue
+Continue statement sama seperti break statement. Namun, alih-alih menghentikan eksekusi program, continue akan 
+melanjutkan iterasi ke iterasi berikutnya.
+--------------------------------------------------------------------
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+      continue;
+  }
+  console.log(i);
+}
+Output : 0
+1
+2
+3
+4
+6
+7
+8
+9
+--------------------------------------------------------------------
+Looping akan berjalan seperti biasa. Namun, ketika nilai variabel i sama dengan 5, iterasi akan dihentikan dan 
+lanjut ke iterasi berikutnya sehingga di terminal/console tidak akan menampilkan angka 5
+
+
+
+Error Handling
+Error yang terjadi bisa berasal dari expected error (error yang terduga) 
+dan unexpected error (error yang tidak terduga). 
+
+Error yang dibiarkan dan tidak ditangani akan menyebabkan crash pada program yang dibangun. JavaScript memiliki 
+cara untuk menangani error tersebut yang disebut dengan error handling. Error handling dapat mencegah crash pada 
+program ketika terjadi error yang disebabkan oleh kesalahan syntax atau error lainnya.
+
+
+Throwing Error
+Saat terjadi error, sinyal yang disebut dengan exception akan bangkit. Cara lain untuk membuat exception adalah 
+menggunakan keyword throw untuk generate sebuah error. Sintaks dasarnya adalah seperti berikut.
+--------------------------------------------------------------------
+throw <objek error>
+--------------------------------------------------------------------
+
+JavaScript memiliki built-in constructor untuk standar error meliputi Error, SyntaxError, dan sebagainya.  
+Perhatikan contoh berikut ini.
+--------------------------------------------------------------------
+const error = new Error('Terjadi error');
+console.error(error);
+--------------------------------------------------------------------
+Pada contoh di atas, kita menggunakan built-in constructor milik JavaScript, Error.
+karena kita ingin program yang dibangun tidak mengalami crash ketika terjadi sesuatu di luar dugaan.
+
+
+Catching Error
+Try-Catch
+Try-catch merupakan cara yang dimiliki JavaScript untuk menangani error.
+Try-catch memiliki dua blok utama yaitu try dan catch. 
+
+--------------------------------------------------------------------
+try {
+ 
+  // code...
+ 
+} catch (err) {
+ 
+  // error handling
+ 
+}
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+try {
+  console.log('Memulai program');
+  console.log('Mengakhiri program');
+} catch (err) {
+  console.log('Karena tidak ada error, blok ini akan diabaikan');
+}
+Output : Memulai program
+Mengakhiri program
+--------------------------------------------------------------------
+Kode tersebut tidak akan mengeksekusi kode di dalam blok catch. Jika ingin blok kode catch dieksekusi, 
+tambahkan error di dalam blok try.
+
+--------------------------------------------------------------------
+try {
+  console.log('Memulai program');
+  throw new Error('Error: Program berhenti');
+  console.log('Mengakhiri program');
+} catch (err) {
+  console.log('Karena ada error, blok ini akan dieksekusi');
+}
+Output : Memulai program
+Karena ada error, blok ini akan dieksekusi
+--------------------------------------------------------------------
+Catatan
+Ketika error dibangkitkan, kode yang ada di bawahnya tidak akan tereksekusi. Pada kasus ini, program akan 
+langsung lompat ke blok catch.
+
+
+Finally
+Finally adalah blok kode yang berada di akhir try-catch. Bilamana catch dieksekusi hanya ketika ada error di 
+dalam blok try, blok yang ada di finally akan selalu dieksekusi.
+
+--------------------------------------------------------------------
+try {
+  console.log('Ini try block');
+} catch (err) {
+  console.log('Ini catch block');
+} finally {
+  console.log('Ini finally block');
+}
+Output : Ini try block
+Ini finally block
+--------------------------------------------------------------------
+Ketika dijalankan, akan tampil di terminal/console yang mencetak tulisan “Ini try block“ dan “Ini finally block”. 
+Dengan menggunakan finally, ia tidak peduli apakah blok try memiliki error atau tidak. 
+
+--------------------------------------------------------------------
+try {
+  console.log('Ini try block');
+  throw new Error('Error: Program berhenti');
+} catch (err) {
+  console.log('Ini catch block');
+} finally {
+  console.log('Ini finally block');
+}
+Output : Ini try block
+Ini catch block
+Ini finally block
+--------------------------------------------------------------------
+
+
+Implementasi Flow Control
+Rasanya ada yang kurang ketika sudah mengetahui teori flow control “sang pengendali program” 
+tanpa mengimplementasikan flow control.
+
+Misalnya, Anda ingin membuat program untuk mengetahui predikat berdasarkan nilai yang dimasukkan. 
+Perhatikan kode program berikut ini.
+--------------------------------------------------------------------
+function checkGrades(grades) {
+  for (let i = 0; i < grades.length; i++) {
+    if (typeof grades[i] !== 'number') {
+      throw new Error('Invalid input. Please provide an array of numbers.');
+    }
+
+    const grade = grades[i];
+    let predicate;
+
+    if (grade >= 90) {
+      predicate = 'A';
+    } else if (grade >= 80) {
+      predicate = 'B';
+    } else if (grade >= 70) {
+      predicate = 'C';
+    } else if (grade >= 60) {
+      predicate = 'D';
+    } else {
+      predicate = 'E';
+    }
+
+    console.log(`Grade ${i + 1}: ${grade} (${predicate})`);
+  }
+}
+
+try {
+  const studentGrades = [95, 85, 65, 80, 70];
+  checkGrades(studentGrades);
+} catch (e) {
+  console.error(e);
+}
+Output : Grade 1: 95 (A)
+Grade 2: 85 (B)
+Grade 3: 65 (D)
+Grade 4: 80 (B)
+Grade 5: 70 (C)
+--------------------------------------------------------------------
+function checkGrades akan menerima input berupa array of number. Di dalamnya, perulangan akan dilakukan untuk 
+mendapatkan masing-masing nilai di dalam array grades. Selanjutnya akan ada percabangan dengan if untuk menagani 
+exceptions ketika grades bukanlah number.
+
+Try-Catch digunakan untuk menangani exception ketika function checkGrades error. Di saat function checkGrades 
+menerima argument berupa string, maka blok catch akan dibangkitkan dan menampilkan pesan error di terminal/console.
 
 
 
