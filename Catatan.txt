@@ -1858,6 +1858,8 @@ menerima argument berupa string, maka blok catch akan dibangkitkan dan menampilk
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 --------------------------------------------------------------------
+--------------------------------------------------------------------
+
 
 Pengantar Modularisasi Harmonis
 “Coding like poetry should be short and concise.”  - Santosh Kalwar, Computer Scientist.
@@ -1872,12 +1874,20 @@ Berikut adalah objektif pembelajaran yang akan dicapai pada modul ini.
 => Mengimplementasikan modularisasi untuk mengekspor function, variable, atau nilai lain di dalam sebuah module.
 => Menggunakan nilai function, variable, atau nilai lain yang diimpor dari sebuah module.
 
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
 Mengenal Modularisasi
 => Modularisasi adalah cara kita untuk memecahkan kode program yang kompleks dan besar menjadi bentuk yang lebih 
 sederhana dan ringkas.
 
 => Implementasi dari modularisasi di JavaScript adalah dengan membuat berkas-berkas terpisah per bagian 
 function/method yang disebut dengan modul.
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
 
 Import memungkinkan kita untuk memasukkan function/method/variable dari modul lain. 
 Export memungkinkan kita untuk mengeluarkan function/method/variable ke modul lain agar dapat digunakan.
@@ -1962,6 +1972,69 @@ output : jhon
 jhonabc@gmail.com
 20
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+Export
+Export adalah keyword yang kita gunakan untuk melabeli suatu function/method/variable agar dapat diakses dari 
+luar modul saat ini. Export terdiri dari dua jenis, yaitu default export dan named export.
+
+--------------------------------------------------------------------
+export const name = 'John';
+export const email = 'john@gmail.com';
+export const age = 25;
+--------------------------------------------------------------------
+
+Cara tersebut merupakan cara export sebelum deklarasi dilakukan.
+ Cara lainnya adalah export setelah deklarasi dilakukan seperti berikut ini.
+
+--------------------------------------------------------------------
+const name = 'John';
+const email = 'john@gmail.com';
+const age = 25;
+ 
+export { name, email, age };
+--------------------------------------------------------------------
+
+Hasilnya akan tetap sama. Variable yang sudah diekspor (name, email, dan age) dapat digunakan di module lainnya.
+ Cara mengimpor named export adalah dengan menuliskan nilainya di dalam sebuah kurung kurawal.
+  Perhatikan contoh berikut ini.
+
+--------------------------------------------------------------------
+import { name, email, age } from './user.mjs';
+ 
+console.log(name, email, age);
+--------------------------------------------------------------------
+
+ada teknik yang disebut dengan default export. 
+Default export adalah cara kita untuk mengekspor minimal satu function/method/variable di sebuah modul.
+Dengan menggunakan default export, modul lain yang ingin menggunakan nilainya tidak perlu tahu spesifik 
+  namanya karena secara default sudah ada function/method/variable yang diekspor.
+
+Perhatikan contoh berikut ini.
+
+--------------------------------------------------------------------
+import goodMorning from './anotherfile.mjs';
+import anotherName from './anotherfile.mjs';
+
+goodMorning();
+anotherName();
+--------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 
