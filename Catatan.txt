@@ -2017,24 +2017,113 @@ Dengan menggunakan default export, modul lain yang ingin menggunakan nilainya ti
 
 Perhatikan contoh berikut ini.
 
+----------------------------------------------------------------------------------------------------------------------------------------
+                  main.mjs                    |       anotherfile.mjs
+                                              | export default function goodMorning () {
+import goodMorning from './anotherfile.mjs';  |   console.log('Good morning!')}
+import anotherName from './anotherfile.mjs';  |
+                                              |
+goodMorning();                                |
+anotherName();                                |
+----------------------------------------------------------------------------------------------------------------------------------------
+Contoh di atas akan mencetak dua tulisan Good morning! di Terminal/Console. Apakah dengan menggunakan default 
+export kita hanya bisa mengekspor satu fungsi, metode, atau variabel saja? Tentu tidak. 
+
+Secara teknis, kita bisa mengekspor lebih dari satu fungsi, metode, atau variabel, tetapi hal ini tidak 
+disarankan ketika menggunakan export default.
+Di JavaScript, satu modul hanya bisa memiliki satu default export. 
+Tujuan dari hal ini adalah agar struktur kode lebih jelas dan memudahkan navigasi ketika ingin mencari suatu modul.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+                  main.mjs                                    |       anotherfile.mjs
+                                                              | export default function sayHi() {
+sayHi(); // Hai, ini default export dari anotherfile.mjs      |     console.log('Hai, ini default export dari anotherfile.mjs');}
+sayGoodBye(); // Bye, ini named export dari anotherfile.mjs   | export function sayGoodBye() {
+                                                              |   console.log('Bye, ini named export dari anotherfile.mjs');}
+Output :
+Hai, ini default export dari anotherfile.mjs
+Bye, ini named export dari anotherfile.mjs
+----------------------------------------------------------------------------------------------------------------------------------------
+Named export cocok digunakan ketika ingin mengekspor banyak nilai dari satu modul.
+named export mengharuskan kita untuk menulis nama function/method/variable secara spesifik ketika mengimpornya.
+
+Default export cocok digunakan untuk menghindari conflict ketika mengimpornya karena kita tidak perlu menulis 
+function/method/variable sesuai dengan namanya.
+  default export membuat struktur lebih jelas karena dalam satu module hanya ada satu nilai yang diekspor.
+
 --------------------------------------------------------------------
-import goodMorning from './anotherfile.mjs';
-import anotherName from './anotherfile.mjs';
+--------------------------------------------------------------------
+--------------------------------------------------------------------
 
-goodMorning();
-anotherName();
+Menggunakan Module
+  Sebelumnya, kita sudah tahu konsep modularisasi di JavaScript. Anda mungkin sudah tahu juga cara menggunakan impor atau ekspor. Di materi ini, kita akan coba menggunakan module di JavaScript.
+
+Mengekspor Variable
+ Untuk mengekspornya dapat dilakukan seperti berikut.
+--------------------------------------------------------------------
+ export const name = 'Dicoding';
+--------------------------------------------------------------------
+
+Selain mengekspor variable yang bertipe string, kita juga dapat mengekspor variable yang bertipe array.
+--------------------------------------------------------------------
+export const favoriteFood = ['pizza', 'pasta', 'sushi'];
 --------------------------------------------------------------------
 
 
+Mengekspor Function
+Cara untuk mengekspor function tak berbeda jauh dengan cara mengekspor variable.
+--------------------------------------------------------------------
+export const name = 'John';
+export const favoriteFood = ['pizza', 'pasta', 'sushi'];
+ 
+export function sayHi(name) {
+  console.log(`Hi, ${name}!`);
+}
 --------------------------------------------------------------------
 
+Agar tidak perlu menulis kata kunci export di setiap nilai yang ingin diekspor
+, Anda dapat mengekspor di akhir berkas seperti berikut.
+
+--------------------------------------------------------------------
+const name = 'John';
+const favoriteFood = ['pizza', 'pasta', 'sushi'];
+ 
+function sayHi(name) {
+  console.log(`Hi, ${name}!`);
+}
+ 
+export { name, favoriteFood, sayHi };
+--------------------------------------------------------------------
+Nilai yang telah diekspor tersebut siap digunakan di mana pun.
+
+
+Mengimpor Variable
+Sekarang, tambahkan berkas baru bernama index.mjs yang akan kita gunakan untuk mengimpor dan menggunakan variable 
+  dan function yang telah diekspor sebelumnya.
+
+--------------------------------------------------------------------
+import { name, favoriteFood } from './module.mjs';
+--------------------------------------------------------------------
+
+Setelah itu, kita dapat mencetak nilainya di Terminal.
+--------------------------------------------------------------------
+console.log(name);
+console.log(favoriteFood);
+--------------------------------------------------------------------
+
+Selain mengimpor dengan named import, kita juga dapat mengimpornya menggunakan import alias. 
+Tenang saja, hasilnya akan tetap sama.
+--------------------------------------------------------------------
+import { name, favoriteFood as food } from './module.mjs';
+ 
+console.log(name);
+console.log(food);
 --------------------------------------------------------------------
 
 
-
-
-
-
+Mengimpor Function
+Untuk mengimpor function dapat dilakukan dengan cara berikut ini.
 
 
 
