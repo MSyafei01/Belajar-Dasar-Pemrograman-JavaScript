@@ -5,7 +5,7 @@ Mengubah ekstensi berkas
 Cara pertama yaitu mengubah ekstensi berkas dari .js menjadi mjs.
 
 
-
+Menambahkan konfigurasi di package.json
 
 
 
