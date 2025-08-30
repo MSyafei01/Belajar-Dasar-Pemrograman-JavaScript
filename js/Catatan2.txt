@@ -12,6 +12,206 @@ Modularisasi dapat mempermudah kita untuk memahami keseluruhan struktur program 
 
 JavaScript awalnya tidak memiliki konsep modularisasi. JavaScript hanya mengenal scope yang sama dari function/method/variable.
 
+Paradigma Berbasis Objek
+Object-oriented programming (OOP) adalah paradigma pemrograman yang memiliki pendekatan berbasis object. 
+
+Object akan berinteraksi satu sama lain untuk menyelesaikan tugas sehingga membentuk keseluruhan program. 
+
+Selain itu, object merupakan representasi dari entitas.
+
+Object adalah bentuk nyata dari suatu entitas, sedangkan class adalah cetak biru (blueprint), 
+cetakan atau template yang dapat kita gunakan berulang kali untuk membuat object
+
+
+Tonggak Utama dari OOP
+OOP sangat cocok digunakan pada program yang kompleks karena dapat mengelompokkan kode menjadi object dan class.
+
+
+Inheritance
+Pilar yang akan kita bahas pertama adalah inheritance. Inheritance jika diterjemahkan 
+    ke dalam bahasa Indonesia artinya adalah pewarisan. 
+
+
+------------------------------------------------------------------------------------------
+class SmartPhones {
+  constructor(color, brand, model) {
+    this.color = color;
+    this.brand = brand;
+    this.model = model;
+  }
+
+  charging() {
+    console.log(`Charging ${this.model}`);
+  }
+}
+
+class iOS extends SmartPhones {
+  airDrop() {
+    console.log('iOS have a behavior AirDrop');
+  }
+}
+
+class Android extends SmartPhones {
+  splitScreen() {
+    console.log('Android have a Split Screen');
+  }
+}
+
+const ios = new iOS('black', 'A', '12 Pro Max');
+const android = new Android('white', 'B', 'Galaxy S21');
+
+ios.charging(); // Output: Charging 12 Pro Max
+ios.airDrop(); // Output: iOS have a behavior AirDrop
+
+android.charging(); // Output: Charging Galaxy S21
+android.splitScreen(); // Output: Android have a Split Screen
+
+
+Output : Charging 12 Pro Max
+iOS have a behavior AirDrop
+Charging Galaxy S21
+Android have a Split Screen
+------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+class SmartPhones {
+  constructor(color, brand, model) {
+    this.color = color;
+    this.brand = brand;
+    this.model = model;
+  }
+
+  charging() {
+    console.log(`Charging ${this.model}`);
+  }
+}
+
+class iOS extends SmartPhones {
+  airDrop() {
+    console.log('iOS have a behavior AirDrop');
+  }
+}
+
+class Android extends SmartPhones {
+  splitScreen() {
+    console.log('Android have a Split Screen');
+  }
+}
+
+const ios = new iOS('black', 'A', '12 Pro Max');
+const android = new Android('white', 'B', 'Galaxy S21');
+
+console.log(ios instanceof SmartPhones); // Output: true
+console.log(android instanceof SmartPhones); // Output: true
+Output : true
+        true
+------------------------------------------------------------------------------------------
+
+    
+Encapsulation
+Setelah kelar membahas pilar OOP pewarisan, berikutnya kita akan membahas pilar utama berikutnya dari OOP yaitu 
+encapsulation. Encapsulation adalah proses untuk membungkus data di suatu wadah yang disebut dengan class. 
+Menyembunyikan data adalah bagian kunci dari encapsulation.
+
+Desain OOP yang baik adalah object hanya akan menampilkan data yang dibutuhkan oleh object lain. 
+Data akan diisolasi dan tidak dapat diakses langsung dari luar. Secara sederhana, encapsulation adalah membuat 
+data yang ada di class sebagai private.
+
+
+Properti dan Method
+Seperti yang Anda ketahui, di dalam sebuah class kita dapat mendefinisikan dua hal, 
+yaitu property dan method. Karena kita menerapkan encapsulation, kita harus mengatur akses dari keduanya. 
+
+------------------------------------------------------------------------------------------
+class CoffeMachine {
+  constructor(waterAmount) {
+    this.waterAmount = waterAmount;
+    this.temperature = 90;
+  }
+
+  makeCoffe() {
+    console.log('Membuat kopi dengan suhu', this.temperature);
+  }
+}
+
+const coffee = new CoffeMachine(100);
+coffee.temperature = 60;
+
+coffee.makeCoffe(); // Output: Membuat kopi dengan suhu 60
+------------------------------------------------------------------------------------------
+
+Pada contoh di atas, kita menetapkan temperature mesin kopi 90 derajat Celcius, 
+tetapi ada pengguna yang iseng mengubahnya menjadi 60. Mengubah nilai tersebut bisa saja mengakibatkan 
+mesin kopi rusak. Meskipun kita sudah menetapkan nilai temperature, nilainya tetap dapat diubah. Hal ini 
+tidaklah baik. Untuk mencegah hal itu terjadi lagi, kita dapat menerapkan getter dan setter.
+
+
+GETTER AND SETTER
+Getter terdiri dari method get. get adalah cara untuk mendapatkan nilai dari property, 
+sedangkan setter terdiri dari method set. set adalah method untuk menetapkan nilai property.
+
+------------------------------------------------------------------------------------------
+class CoffeeMachine {
+  constructor(waterAmount) {
+    this.waterAmount = waterAmount;
+    this._temperature = 90
+  }
+
+  set temperature(temperature) {
+    console.log('you are not allowed to change the temperature');
+  }
+
+  get temperature() {
+    return this._temperature;
+  }
+}
+
+const coffee = new CoffeeMachine(10);
+console.log('Sebelum diubah: ', coffee.temperature);
+coffee.temperature = 100;
+console.log('Setelah diubah: ', coffee.temperature);
+------------------------------------------------------------------------------------------
+
+Penambahan underscore (_) di variable temperature untuk menandakan bahwa nilai temperature tidak dapat diubah. 
+
+
+------------------------------------------------------------------------------------------
+class CoffeeMachine {
+  #temperature = 90;
+
+  constructor(waterAmount) {
+    this.waterAmount = waterAmount;
+    this.#temperature = this.#defaultTemperature();
+  }
+
+  set temperature(temperature) {
+    console.log('you are not allowed to change the temperature');
+  }
+
+  get temperature() {
+    return this.#temperature;
+  }
+
+  #defaultTemperature() {
+    return 90;
+  }
+}
+------------------------------------------------------------------------------------------
+Sejak JavaScript versi ES2022, kita dapat menggunakan tanda hashtag (#) untuk membuat hak akses private pada property dan method.
+
+
+Polymorphism
+Seperti yang Anda ketahui sebelumnya bahwa kita dapat mewariskan property dan method ke class lainnya. 
+Namun, apa yang terjadi jika SubClass ingin mengubah implementasi dari method yang diwariskan dari SuperClass? Layaknya kita sebagai anak, ingin mengubah suatu sifat atau perilaku dari orang tua yang kita mungkin tidak setuju atau butuhkan. Jangan khawatir, di OOP kita dapat mengubah implementasi method yang diturunkan dari SuperClass.
+
+
+
+
+
+
+
+
+
 
 
 
