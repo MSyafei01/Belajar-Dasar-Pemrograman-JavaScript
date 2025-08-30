@@ -7,6 +7,12 @@ Cara pertama yaitu mengubah ekstensi berkas dari .js menjadi mjs.
 
 Menambahkan konfigurasi di package.json
 
+Manfaat dari modularisasi adalah dapat menyelesaikan masalah terkait struktur dan kode program
+Modularisasi dapat mempermudah kita untuk memahami keseluruhan struktur program sehingga gampang untuk berkolaborasi.
+
+JavaScript awalnya tidak memiliki konsep modularisasi. JavaScript hanya mengenal scope yang sama dari function/method/variable.
+
+
 
 
 
